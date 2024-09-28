@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <!--车次查询项容器-->
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="UselessParent"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/train_card_background"
+            >
+
+        <!--车次信息容器-->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:orientation="horizontal">
+
+            <!--起点-->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="16:15"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="过"
+                            android:background="@drawable/text_view_background"
+                            android:textColor="@color/white"
+                            />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="临海"
+                            android:layout_marginStart="5dp"
+                            android:textSize="20sp"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <!--车次信息-->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        >
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="G7432"
+                            android:layout_marginEnd="5dp"
+                            android:textSize="20sp"
+                            />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="兑"
+                            android:background="@drawable/text_view_background"
+                            android:textColor="@color/white"
+                            />
+                </LinearLayout>
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey"
+                        android:layout_margin="5dp"
+                        />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2小时"
+                        android:textSize="@dimen/s15"
+                        android:textColor="@color/super_black40"
+                        />
+
+
+            </LinearLayout>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <!--终点-->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18:15"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        />
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="过"
+                            android:background="@drawable/text_view_background"
+                            android:textColor="@color/white"
+                            />
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="杭州东"
+                            android:layout_marginStart="5dp"
+                            android:textSize="20sp"
+                            />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <!--票价-->
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    >
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥188"
+                        android:textColor="@color/orange"
+                        android:textSize="25sp"
+                        />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                android:layout_marginEnd="5dp"
+                />
+
+        <!--车票容器-->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf">
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="二等"
+                        android:textSize="@dimen/s15"
+                        android:layout_marginEnd="5dp"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有票"
+                        android:textSize="@dimen/s15"
+                        android:textColor="@color/green"
+                        />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="一等"
+                        android:textSize="@dimen/s15"
+                        android:layout_marginEnd="5dp"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有票"
+                        android:textSize="@dimen/s15"
+                        android:textColor="@color/green"
+                        />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商务"
+                        android:textSize="@dimen/s15"
+                        android:layout_marginEnd="5dp"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="候补"
+                        android:textSize="@dimen/s15"
+                        android:textColor="@color/primary_blue"
+                        />
+            </LinearLayout>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无座"
+                        android:textSize="@dimen/s15"
+                        android:layout_marginEnd="5dp"
+                        />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="有票"
+                        android:textSize="@dimen/s15"
+                        android:textColor="@color/green"
+                        />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
