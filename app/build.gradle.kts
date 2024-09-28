@@ -47,6 +47,11 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+    
+    //添加ViewBinding属性
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
