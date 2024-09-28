@@ -13,9 +13,8 @@
             android:theme="@style/Theme.AndroidCourse"
             tools:targetApi="31">
         <activity
-                android:name=".MainActivity"
+                android:name=".components.TrainInfoListActivity"
                 android:exported="true"
-                android:label="@string/app_name"
                 android:theme="@style/Theme.AndroidCourse">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

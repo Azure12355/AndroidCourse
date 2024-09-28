@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Homework.Base" parent="Theme.Material3.DayNight.NoActionBar" >
+    <!--region 主题设置-->
+    <style name="Theme.AndroidCourse.Base" parent="Theme.Material3.DayNight.NoActionBar" >
+        <!--主色调-->
         <item name="colorPrimary">@color/primary_blue</item>
+        <!--次要色调-->
         <item name="colorSecondary">@color/primary_blue</item>
+        <!--次要色调的表面色-->
         <item name="colorOnSecondary">@color/white</item>
-        
+        <!--表面色-->
         <item name="colorOnSurface">@color/super_black40</item>
     </style>
     
-    <style name="Theme.Homework" parent="Theme.Homework.Base"/>
+    <style name="Theme.AndroidCourse" parent="Theme.AndroidCourse.Base"/>
+    <!--endregion-->
 
     <!--region 按钮相关主题-->
     <!--按钮-->
@@ -23,7 +28,8 @@
         <item name="android:textColor">@color/white</item>
     </style>
     <!--endregion-->
-    
+
+    <!--region 编辑框相关主题-->
     <style name="SuperEditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -33,7 +39,9 @@
         <item name="android:textColor">@color/super_black40</item>
         <item name="android:background">@drawable/edit_text_border</item>
     </style>
+    <!--endregion-->
 
+    <!--region 圆角相关主题-->
     <style name="round_corner_style">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">15dp</item>
@@ -43,4 +51,5 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+    <!--endregion-->
 </resources>
