@@ -2,8 +2,11 @@ package com.lytton.androidcourse.components
 
 import android.app.Activity
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
@@ -68,7 +71,7 @@ class TrainInfoListActivity : BaseViewModelActivity<ActivityTrainInfoListBinding
     private lateinit var trainInfoList: MutableList<TrainInfo>
     //列车信息列表适配器
     private lateinit var trainInfoListAdapter: TrainInfoListAdapter
-    //编辑窗口启动器(数据传输的核心)
+    //编辑窗口启动器(修改列车信息)
     private val editTrainInfoLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -85,7 +88,55 @@ class TrainInfoListActivity : BaseViewModelActivity<ActivityTrainInfoListBinding
                 }
             }
         }
+    //编辑窗口启动器(新增列车信息)
+    private val addTrainLauncher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                result.data?.let { data ->
+                    val newTrainInfo = data.getParcelableExtra<TrainInfo>("updatedTrainInfo")
+                    newTrainInfo?.let { trainInfo ->
+                        // 将新的车次信息添加到列表
+                        trainInfoList.add(trainInfo)
+                        // 通知适配器更新列表
+                        trainInfoListAdapter.notifyItemInserted(trainInfoList.size - 1)
+                    }
+                }
+            }
+        }
     
+
+    /**
+     * 创建菜单项
+     */
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu) //加载菜单资源
+        return true
+    }
+
+    /**
+     * 菜单项的点击回调
+     */
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_add -> {
+                // 点击添加选项时，启动添加车次信息的窗口
+                val intent = Intent(this, EditTrainInfoActivity::class.java)
+                addTrainLauncher.launch(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    /**
+     * 创建钩子
+     */
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // 初始化 Toolbar
+        setSupportActionBar(binding.toolbar) // 确保 binding.toolbar 是您在布局中定义的 Toolbar
+    }
+
 
     /**
      * 初始化数据
@@ -121,9 +172,5 @@ class TrainInfoListActivity : BaseViewModelActivity<ActivityTrainInfoListBinding
         binding.trainInfoList.adapter = trainInfoListAdapter
 
     }
-
-
-
-
     
 }

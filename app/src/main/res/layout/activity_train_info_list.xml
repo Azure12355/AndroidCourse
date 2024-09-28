@@ -9,10 +9,14 @@
         android:orientation="vertical"
         >
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="hello"/>
+    <!-- 添加 Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    
 
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/trainInfoList"
