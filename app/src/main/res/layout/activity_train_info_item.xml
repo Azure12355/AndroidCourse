@@ -48,6 +48,7 @@
                             android:textColor="@color/white"
                             />
                     <TextView
+                            android:id="@+id/train_start"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="临海"
@@ -75,13 +76,15 @@
                         android:layout_height="wrap_content"
                         android:padding="5dp"
                         >
+
                     <TextView
+                            android:id="@+id/train_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="G7432"
                             android:layout_marginEnd="5dp"
-                            android:textSize="20sp"
-                            />
+                            android:textSize="20sp" />
+
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -140,6 +143,7 @@
                             android:textColor="@color/white"
                             />
                     <TextView
+                            android:id="@+id/train_end"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="杭州东"
@@ -161,6 +165,7 @@
                     android:gravity="center"
                     >
                 <TextView
+                        android:id="@+id/train_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="￥188"
