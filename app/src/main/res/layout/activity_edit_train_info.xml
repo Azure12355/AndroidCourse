@@ -1,0 +1,39 @@
+<!-- res/layout/activity_edit_train_info.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        >
+
+    <EditText
+            android:id="@+id/edit_train_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="列车名称" />
+
+    <EditText
+            android:id="@+id/edit_train_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="出发地" />
+
+    <EditText
+            android:id="@+id/edit_train_end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="目的地" />
+
+    <EditText
+            android:id="@+id/edit_train_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="票价" />
+
+    <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存" />
+</LinearLayout>
