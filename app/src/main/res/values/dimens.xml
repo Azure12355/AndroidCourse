@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="design_bottom_navigation_active_text_size">12dp</dimen>
+    <dimen name="design_bottom_navigation_text_size">12dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!--阴影大小-->
+    <dimen name="elevation">10dp</dimen>
+
+    <dimen name="padding_small">5dp</dimen>
+
+    <dimen name="padding_middle">10dp</dimen>
+
+    <dimen name="padding_outer">16dp</dimen>
+
+    <dimen name="padding_large">20dp</dimen>
+
+    <!--行高-->
+    <dimen name="line_space" format="">16dp</dimen>
+
+    <dimen name="notification_height_meddle">120dp</dimen>
+
+    <dimen name="tab_layout_height">45dp</dimen>
+
+    <!--指示器相关-->
+    <dimen name="guide_indicator_height">40dp</dimen>
+
+
+    <!--region 分割线相关-->
+    <dimen name="divider_small0">0.8dp</dimen>
+    <dimen name="divider_small">1dp</dimen>
+    <dimen name="divider_meddle">10dp</dimen>
+    <dimen name="divider_comment_reply">2dp</dimen>
+
+    <!--圆角相关-->
+    <dimen name="round_small">5dp</dimen>
+    <dimen name="round_meddle">10dp</dimen>
+    <dimen name="round_button_small">15dp</dimen>
+    <dimen name="round_button">23dp</dimen>
+
+    <!--文本大小-->
+    <dimen name="text_small">13sp</dimen>
+    <dimen name="text_meddle">15sp</dimen>
+    <dimen name="text_meddle2">16sp</dimen>
+    <dimen name="text_large">17sp</dimen>
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_large2">22sp</dimen>
+    <dimen name="text_price">30sp</dimen>
+
+    <!--dp-->
+    <dimen name="d0_5">0.5dp</dimen>
+    <dimen name="d1">1dp</dimen>
+    <dimen name="d1_5">1.5dp</dimen>
+    <dimen name="d2">2dp</dimen>
+    <dimen name="d3">3dp</dimen>
+    <dimen name="d4">4dp</dimen>
+    <dimen name="d5">5dp</dimen>
+    <dimen name="d6">6dp</dimen>
+    <dimen name="d7">7dp</dimen>
+    <dimen name="d8">8dp</dimen>
+    <dimen name="d9">9dp</dimen>
+    <dimen name="d10">10dp</dimen>
+    <dimen name="d11">11dp</dimen>
+    <dimen name="d12">12dp</dimen>
+    <dimen name="d13">13dp</dimen>
+    <dimen name="d14">14dp</dimen>
+    <dimen name="d15">15dp</dimen>
+    <dimen name="d16">16dp</dimen>
+    <dimen name="d16_5">16.5dp</dimen>
+    <dimen name="d17">17dp</dimen>
+    <dimen name="d17_5">17.5dp</dimen>
+    <dimen name="d18">18dp</dimen>
+    <dimen name="d20">20dp</dimen>
+    <dimen name="d21">21dp</dimen>
+    <dimen name="d22">22dp</dimen>
+    <dimen name="d23">23dp</dimen>
+    <dimen name="d24">24dp</dimen>
+    <dimen name="d25">25dp</dimen>
+    <dimen name="d26">26dp</dimen>
+    <dimen name="d27">27dp</dimen>
+    <dimen name="d27_5">27.5dp</dimen>
+    <dimen name="d28">28dp</dimen>
+    <dimen name="d30">30dp</dimen>
+    <dimen name="d32">32dp</dimen>
+    <dimen name="d34">34dp</dimen>
+    <dimen name="d36">36dp</dimen>
+    <dimen name="d40">40dp</dimen>
+    <dimen name="d50">50dp</dimen>
+    <dimen name="d60">60dp</dimen>
+    <dimen name="d100">100dp</dimen>
+    <dimen name="d110">110dp</dimen>
+    <dimen name="d120">120dp</dimen>
+    <dimen name="d130">130dp</dimen>
+    <dimen name="d140">140dp</dimen>
+    <dimen name="d200">200dp</dimen>
+    <dimen name="d280">280dp</dimen>
+
+
+    <!--sp-->
+    <dimen name="s10">10sp</dimen>
+    <dimen name="s11">11sp</dimen>
+    <dimen name="s12">12sp</dimen>
+    <dimen name="s13">13sp</dimen>
+    <dimen name="s14">14sp</dimen>
+    <dimen name="s15">15sp</dimen>
+    <dimen name="s16">16sp</dimen>
+    <dimen name="s17">17sp</dimen>
+    <dimen name="s18">18sp</dimen>
+    <dimen name="s20">20sp</dimen>
+    <dimen name="s24">24sp</dimen>
+    <dimen name="s40">40sp</dimen>
+
+
+    <!--头像-->
+    <dimen name="avatar_width_small">30dp</dimen>
+    <dimen name="avatar_width_meddle">40dp</dimen>
+    <dimen name="avatar_width_large">60dp</dimen>
+    <dimen name="avatar_width">80dp</dimen>
+
+    <!--按钮相关-->
+    <dimen name="button_width_small">80dp</dimen>
+    <dimen name="button_width_large">130dp</dimen>
+    <dimen name="button_height_small">30dp</dimen>
+    <dimen name="button_height_small2">40dp</dimen>
+    <dimen name="button_height">44dp</dimen>
+    <dimen name="button_height_large">50dp</dimen>
+    <dimen name="button_width">100dp</dimen>
+
+    <dimen name="super_button_height">55dp</dimen>
+
+    <dimen name="title_height_small">30dp</dimen>
+    <dimen name="item_height_meddle">50dp</dimen>
+
+    <dimen name="item_chat_image_width">200dp</dimen>
+    <dimen name="icon_height_small">16dp</dimen>
+    <dimen name="padding_message">80dp</dimen>
+
+    <dimen name="publish_message_edit_text_height">150dp</dimen>
+
+
+</resources>
