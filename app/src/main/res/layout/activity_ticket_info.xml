@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        > 
+    <TextView
+            android:id="@+id/starting_station"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杭州东"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            />
+    <TextView
+            android:id="@+id/terminal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="临海"
+            />
+    
+</LinearLayout>
