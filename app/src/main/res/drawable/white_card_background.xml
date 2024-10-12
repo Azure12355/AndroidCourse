@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--白色卡片背景-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--填充颜色-->
+    <solid android:color="@android:color/white"/>
+    <!--边框描边-->
+    <stroke
+        android:width="2dp"
+        android:color="@color/white"/>
+    <!--圆角-->
+    <corners android:radius="20dp"/>
+    
+</shape>
