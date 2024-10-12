@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        > 
+        android:paddingEnd="10dp"
+        >
+
     <TextView
             android:id="@+id/starting_station"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="杭州东"
-            />
+            android:text="杭州东" />
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
