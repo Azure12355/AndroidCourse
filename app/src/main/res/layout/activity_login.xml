@@ -17,6 +17,7 @@
             android:orientation="vertical">
         <!--账号-->
         <EditText
+                android:id="@+id/account"
                 style="@style/SuperEditText"
                 android:autofillHints="请输入用户名"
                 android:hint="用户名:"
@@ -24,6 +25,7 @@
                 android:layout_marginBottom="10dp" />
         <!--密码-->
         <EditText
+                android:id="@+id/password"
                 style="@style/SuperEditText"
                 android:autofillHints="请输入密码"
                 android:hint="密码:"
@@ -35,6 +37,7 @@
                 android:layout_height="wrap_content">
 
             <CheckBox
+                    android:id="@+id/remember"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="记住密码" />
@@ -72,6 +75,7 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
             <com.google.android.material.button.MaterialButton
+                    android:id="@+id/register"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:minWidth="130dp"
@@ -85,6 +89,7 @@
             
             
             <com.google.android.material.button.MaterialButton
+                    android:id="@+id/login"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:minWidth="130dp"
