@@ -4,12 +4,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
+import com.google.gson.Gson
 import com.lytton.androidcourse.R
 import com.lytton.androidcourse.base.activity.BaseViewModelActivity
 import com.lytton.androidcourse.databinding.ActivityTicketInquiryBinding
 import com.lytton.androidcourse.entity.TicketInfo
+import java.io.File
+import java.io.FileWriter
 
 class TicketInquiryActivity : BaseViewModelActivity<ActivityTicketInquiryBinding>() {
     /**
@@ -51,18 +56,98 @@ class TicketInquiryActivity : BaseViewModelActivity<ActivityTicketInquiryBinding
     override fun initDatum() {
         super.initDatum()
         
-        ticketInfoList = mutableListOf(
+        /*ticketInfoList = mutableListOf(
             TicketInfo("杭州东", "宁波"),
             TicketInfo("杭州东", "宁波"),
             TicketInfo("杭州东", "宁波"),
             TicketInfo("杭州东", "宁波"),
             TicketInfo("杭州东", "宁波"),
             TicketInfo("杭州东", "宁波"),
-        )
+        )*/
+        
+        ticketInfoList = mutableListOf()
+        
         
         binding.ticketInfoList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        binding.ticketInfoList.adapter = TicketInfoListAdapter(ticketInfoList)
+        ticketInfoListAdapter = TicketInfoListAdapter(ticketInfoList)
+        binding.ticketInfoList.adapter = ticketInfoListAdapter
+
+        //从文件中加载车票信息
+        loadTicketInfoFromFile()
+        
+        binding.ticketInquiry.setOnClickListener {
+            saveCurrentTicketInfo()
+        }
+        
+        binding.clearHistory.setOnClickListener {
+            clearTicketInfoFile()
+        }
     }
-    
+
+
+    /**
+     * 从文件中加载车票信息
+     */
+    private fun loadTicketInfoFromFile() {
+        val file = File(getExternalFilesDir(null), "ticket_info.json")
+        if (file.exists()) {
+            val content = file.readText()
+            val gson = Gson()
+            val listType = object : TypeToken<List<TicketInfo>>() {}.type
+            ticketInfoList = gson.fromJson<MutableList<TicketInfo>?>(content, listType)?.toMutableList() ?: mutableListOf()
+
+            // 更新适配器
+            ticketInfoListAdapter = TicketInfoListAdapter(ticketInfoList)
+            binding.ticketInfoList.adapter = ticketInfoListAdapter
+            ticketInfoListAdapter.notifyDataSetChanged() // Notify adapter of data change
+
+            // 显示第一个车票信息
+            if (ticketInfoList.isNotEmpty()) {
+                val firstTicket = ticketInfoList[0]
+                binding.startingStation.setText(firstTicket.startingStation)
+                binding.terminal.setText(firstTicket.terminal)
+            }
+        }
+    }
+
+
+    /**
+     * 保存车票信息
+     */
+    private fun saveCurrentTicketInfo() {
+        val startingStation = binding.startingStation.text.toString()
+        val terminal = binding.terminal.text.toString()
+        val newTicketInfo = TicketInfo(startingStation, terminal)
+
+        ticketInfoList.add(newTicketInfo) // Add new ticket info to the list
+        ticketInfoListAdapter.notifyItemInserted(ticketInfoList.size - 1)
+
+        val gson = Gson()
+        val json = gson.toJson(ticketInfoList)
+        val file = File(getExternalFilesDir(null), "ticket_info.json")
+
+        try {
+            FileWriter(file).use { writer -> writer.write(json) }
+            Toast.makeText(this, "车票信息已保存", Toast.LENGTH_SHORT).show()
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Toast.makeText(this, "保存失败", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    /**
+     * 删除车票信息
+     */
+    private fun clearTicketInfoFile() {
+        val file = File(getExternalFilesDir(null), "ticket_info.json")
+        if (file.exists()) {
+            file.writeText("") // Clear the file
+            ticketInfoList.clear() // Clear the list
+            ticketInfoListAdapter.notifyDataSetChanged() // Notify adapter of data change
+            Toast.makeText(this, "历史记录已清除", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "没有历史记录", Toast.LENGTH_SHORT).show()
+        }
+    }
     
 }
